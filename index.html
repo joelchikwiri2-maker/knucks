@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy birthday</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero" id="top">
+  <span class="deco d1" aria-hidden="true">♡</span><span class="deco d2" aria-hidden="true">★</span>
+  <span class="deco d3" aria-hidden="true">✿</span><span class="deco d4" aria-hidden="true">♡</span>
+  <span class="deco d5" aria-hidden="true">★</span>
+  <p class="eyebrow">★ a birthday surprise ★</p>
+  <h1>Happy birthday, <span id="heroName" class="script">Kerita</span> ♡</h1>
+  <p class="lead" id="heroMsg"></p>
+  <button class="btn" id="openBtn" type="button">Open your surprise ♡</button>
+</header>
+
+<main>
+    <section id="photos" class="sec">
+      <h2 class="script">Our little scrapbook</h2>
+      <div class="collage" id="collage"></div>
+    </section>
+
+    <section id="things" class="sec">
+      <h2 class="script" id="thingsHeading"></h2>
+      <div class="cards" id="cards"></div>
+    </section>
+
+<section id="letter" class="sec">
+  <article class="letter" aria-label="A letter for you">
+    <span class="tape" aria-hidden="true"></span>
+    <p class="script greet" id="greet"></p>
+    <div id="letterBody"></div>
+    <p class="script signoff" id="signoff"></p>
+  </article>
+</section>
+
+<section id="reveal" class="sec reveal">
+  <h2 class="script" id="revealHeading"></h2>
+  <p class="cap" id="revealCaption"></p>
+  <p id="revealExplain"></p>
+  <div class="player" id="player">
+    <button class="play" id="playBtn" type="button" aria-label="Play">▶</button>
+    <div class="pmain">
+      <div class="ptitle"><strong id="tTitle"></strong> <span id="tArtist"></span></div>
+      <input type="range" id="seek" min="0" max="100" value="0" step="0.1" aria-label="Seek" disabled>
+      <div class="times"><span id="cur">0:00</span><span id="status">Loading…</span><span id="dur">–:––</span></div>
+    </div>
+    <audio id="audio" preload="metadata"></audio>
+  </div>
+  <p class="fallback" id="fallback" hidden>The beat isn’t loading yet. Check that the file name in <code>config.js</code> matches the file in <code>assets/audio/</code>.</p>
+  <p class="final script" id="revealFinal"></p>
+</section>
+</main>
+
+<footer class="end">
+  <p class="script big" id="footLine"></p>
+  <p class="script" id="footName"></p>
+  <a href="#top" class="back">Back to the top ↑</a>
+</footer>
+
+<script defer src="config.js"></script>
+<script defer src="script.js"></script>
+</body>
+</html>
